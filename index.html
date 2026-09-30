@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Portfolio Jules Bouscaud</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <!-- Barre de navigation flottante -->
+    <header class="floating-navbar">
+        <a href="index.html" class="navbar-logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span>Portfolio Data</span>
+        </a>
+
+        <nav class="navbar-links" id="navbarLinks">
+            <a href="index.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="stage.html">Stage</a>
+            <a href="a_propos.html">À propos de moi</a>
+        </nav>
+
+        <!-- Bouton CV principal -->
+        <a href="static/docs/cv.pdf" class="navbar-download-btn" download="Mon_CV.pdf">Mon CV</a>
+
+        <button class="navbar-mobile-toggle" id="navbarMobileToggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Jules Bouscaud</h1>
+
+           <div class="hero-tags-row">
+            <span class="hero-tag">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3L2 8L12 13L22 8L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 10V16C6 16 8.5 18 12 18C15.5 18 18 16 18 16V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Master Économétrie
+            </span>
+            <span class="hero-tag">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="5" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M9 20H15M12 17V20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                Stage Data
+            </span>
+            <span class="hero-tag">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M12 7.5V12L15 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                3 à 6 mois
+            </span>
+            <span class="hero-tag">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21C12 21 19 15 19 10C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 10C5 15 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    <circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+                Nantes 
+            </span>
+        </div>
+        <br>
+            <p class="tagline">
+                Cette application web est un portfolio interactif visant à mettre en avant mes compétences et les projets que j'ai réalisé au cours
+                de mes études. 
+            </p>
+        </section>
+
+        <section class="about-me">
+            <h2>Qui suis-je ?</h2>
+            <p class="about-text">
+                J'ai découvert l'économétrie et la data en licence de mathématiques-économie. 
+                Depuis, je continue d'approfondir mes connaissances dans ce domaine en Master d'économétrie et de statistiques à l'université de Nantes.
+                Actuellement sur ma deuxième année de Master, je suis à la recherche d'un <a href="stage.html" class="underline-hover">stage de fin d'études</a> dans la data 
+                pour mettre en pratiques toutes les compétences que j'ai acquises au fil de mes études.
+         </p>
+            
+            <blockquote class="personal-note">
+                «J'aime transformer la donnée en informations exploitables afin de prendre des décisions optimales.»
+            </blockquote>
+        </section>
+
+        <section class="projects-preview">
+            <span class="section-eyebrow">Sélection</span>
+            <h2>Mes projets phares</h2>
+            <p class="section-text">
+                Voici une petite sélection des principaux projets de ce portfolio. D'autres projets sont disponibles 
+                dans la section <a href="projets.html">Projets</a>. 
+            </p>
+        </section>
+
+        <div class="carousel" id="carousel">
+            <button class="carousel-arrow carousel-arrow-left" id="prevBtn" aria-label="Projet précédent">&#8249;</button>
+
+            <div class="carousel-track" id="carouselTrack">
+                <a href="projet.html?id=nuitees" class="carousel-card" data-index="0">
+                    <img src="static/img/projet1.jpg" alt="Prévision des nuitées hôtelières">
+                    <div class="carousel-card-body"><h3>Prévision des nuitées hôtelières</h3></div>
+                </a>
+
+                <a href="projet.html?id=dashboard" class="carousel-card" data-index="1">
+                    <img src="static/img/projet2.jpg" alt="Dashboard Power BI">
+                    <div class="carousel-card-body"><h3>Dashboard opérationnel Power BI</h3></div>
+                </a>
+
+                <a href="projet.html?id=accident routier" class="carousel-card" data-index="2">
+                    <img src="static/img/projet6.jpg" alt="accident mortel">
+                    <div class="carousel-card-body">
+                        <h3>Analyse économétrique du taux de mortalité routière</h3>
+                    </div>
+                </a>
+            </div>
+
+            <button class="carousel-arrow carousel-arrow-right" id="nextBtn" aria-label="Projet suivant">&#8250;</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="#" class="footer-legal-link" id="openLegalModal">Mentions légales</a>
+            <div class="footer-center-group">
+                <a href="mailto:ton.email@exemple.com" class="footer-cta">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6L12 13L21 6M4 5H20C20.5523 5 21 5.44772 21 6V18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18V6C3 5.44772 3.44772 5 4 5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Me contacter
+                </a>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/jules-bouscaud-17594324b/" target="_blank" class="footer-icon" data-tooltip="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M7.5 10V17M7.5 7V7.01M12 17V13C12 11.6 12.8 10.5 14.2 10.5C15.5 10.5 16 11.4 16 13V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Jules-BStats" target="_blank" class="footer-icon" data-tooltip="GitHub">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3C7 3 3 7 3 12C3 16 5.6 19.4 9.3 20.6C9.8 20.7 10 20.4 10 20.1V18.3C7.4 18.9 6.9 17.2 6.9 17.2C6.5 16.2 5.9 16 5.9 16C5.1 15.4 6 15.4 6 15.4C6.8 15.5 7.3 16.3 7.3 16.3C8.1 17.6 9.4 17.2 9.8 17C9.9 16.4 10.1 16 10.4 15.8C8.3 15.5 6.1 14.7 6.1 11.1C6.1 10.1 6.5 9.3 7.1 8.6C7 8.4 6.7 7.5 7.2 6.3C7.2 6.3 8 6 10 7.4C10.8 7.2 11.7 7.1 12.6 7.1C13.4 7.1 14.3 7.2 15.1 7.4C17.1 6 17.9 6.3 17.9 6.3C18.4 7.5 18.1 8.4 18 8.6C18.6 9.3 19 10.1 19 11.1C19 14.7 16.8 15.5 14.6 15.8C15 16.1 15.3 16.7 15.3 17.6V20.1C15.3 20.4 15.5 20.7 16 20.6C19.7 19.4 22.3 16 22.3 12C22.3 7 18.3 3 13.3 3H12Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </footer>
+
+    <!-- Fenêtre Modale des Mentions Légales -->
+    <div class="legal-modal-overlay" id="legalModal">
+        <div class="legal-modal-content">
+            <button class="legal-modal-close" id="closeLegalModal">&times;</button>
+            <h2>Mentions Légales et RGPD</h2>
+            <h3>1. Éditeur du site</h3>
+            <p>Le présent site est un portfolio personnel édité par <strong>Jules Bouscaud</strong>.</p>
+            <h3>2. Hébergement</h3>
+            <p>Le site est hébergé par <strong>[Nom de ton hébergeur, ex: Vercel Inc.]</strong><br>
+            Adresse : [Adresse de l'hébergeur]</p>
+            <h3>3. Propriété intellectuelle et Copyright</h3>
+            <p>© 2026 Jules Bouscaud - Tous droits réservés. Sauf mention contraire, les textes, le code source et la structure de ce site sont la propriété exclusive de l'éditeur. Les images utilisées sont libres de droits.</p>
+            <h3>4. Protection des données personnelles (RGPD)</h3>
+            <p>Ce site web est un site vitrine informatif en lecture seule. Aucune information personnelle n'est collectée à l'insu de l'utilisateur, aucun formulaire interactif ne stocke de données en base de données, et aucun cookie publicitaire ou de traçage n'est déposé.</p>
+        </div>
+    </div>
+
+    <!-- Bouton Scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Remonter en haut">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>   
+
+    <!-- Scripts JS externes -->
+    <script src="static/js/nav.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/carousel.js"></script>
+</body>
+</html>
