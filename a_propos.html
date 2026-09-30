@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Portfolio Jules Bouscaud</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <header class="floating-navbar">
+        <a href="index.html" class="navbar-logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>Portfolio Data</span>
+        </a>
+        <nav class="navbar-links" id="navbarLinks">
+            <a href="index.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="stage.html">Stage</a>
+            <a href="a_propos.html">À propos de moi</a>
+        </nav>
+        <a href="static/docs/cv.pdf" class="navbar-download-btn" download="Mon_CV.pdf">Mon CV</a>
+        <button class="navbar-mobile-toggle" id="navbarMobileToggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>Compétences</h2>
+            <h3 class="skills-subtitle">Langages & outils</h3>
+            
+            <div class="skills-grid">  
+                <!-- Grille des compétences (inchangée) -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <img src="https://cdn.simpleicons.org/r/6230F0" alt="" class="skill-logo">
+                        <h4>R</h4>
+                    </div>
+                    <div class="skill-packages">
+                        <span class="package-badge"><img src="https://cdn.simpleicons.org/tidyverse/4E5966" alt="">tidyverse</span>
+                        <span class="package-badge">Shiny</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <img src="https://cdn.simpleicons.org/python/6230F0" alt="" class="skill-logo">
+                        <h4>Python</h4>
+                    </div>
+                    <div class="skill-packages">
+                        <span class="package-badge"><img src="https://cdn.simpleicons.org/pandas/4E5966" alt="">Pandas</span>
+                        <span class="package-badge"><img src="https://cdn.simpleicons.org/numpy/4E5966" alt="">NumPy</span>
+                        <span class="package-badge"><img src="https://cdn.simpleicons.org/scikitlearn/4E5966" alt="">scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <img src="https://cdn.simpleicons.org/postgresql/6230F0" alt="" class="skill-logo">
+                        <h4>SQL</h4>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-logo skill-logo-fallback">
+                            <rect x="3.5" y="10" width="4" height="10.5" rx="1" fill="currentColor"/>
+                            <rect x="10" y="4.5" width="4" height="16" rx="1" fill="currentColor"/>
+                            <rect x="16.5" y="13" width="4" height="7.5" rx="1" fill="currentColor"/>
+                        </svg>
+                        <h4>Power BI</h4>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <img src="https://cdn.simpleicons.org/qgis/6230F0" alt="" class="skill-logo">
+                        <h4>QGIS</h4>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-logo">
+                            <path d="M8 8L3.5 12L8 16M16 8L20.5 12L16 16" stroke="#6230F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5 5.5L10.5 18.5" stroke="#6230F0" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                        <h4>Langages web</h4>
+                    </div>
+                    <div class="skill-packages">
+                        <span class="package-badge">HTML</span>
+                        <span class="package-badge">CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-logo skill-logo-fallback">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M6.5 15L9.5 10.5L12.5 13L17.5 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="17.5" cy="7" r="1.1" fill="currentColor"/>
+                        </svg>
+                        <h4>Stata</h4>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-logo skill-logo-fallback">
+                            <ellipse cx="12" cy="7" rx="8" ry="3" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M4 7V17C4 18.6569 7.58172 20 12 20C16.4183 20 20 18.6569 20 17V7" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M4 12C4 13.6569 7.58172 15 12 15C16.4183 15 20 13.6569 20 12" stroke="currentColor" stroke-width="1.6"/>
+                        </svg>
+                        <h4>SAS</h4>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <img src="https://cdn.simpleicons.org/linux/6230F0" alt="" class="skill-logo">
+                        <h4>Linux</h4>
+                    </div>
+                    <div class="skill-packages">
+                        <span class="package-badge"><img src="https://cdn.simpleicons.org/gnubash/4E5966" alt="">Bash</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="skills-subtitle">Savoir-faire techniques</h3>
+            <div class="competency-group">
+                <h4 class="competency-group-title">Statistiques &amp; économétrie</h4>
+                <div class="competencies-list">
+                    <span class="competency-badge">Modélisation statistique</span>
+                    <span class="competency-badge">Économétrie qualitative et quantitative</span>
+                    <span class="competency-badge">Séries temporelles ((S)ARIMA, VAR)</span>
+                    <span class="competency-badge">Prévision</span>
+                    <span class="competency-badge">Régression pénalisée</span>
+                </div>
+            </div>
+
+            <div class="competency-group">
+                <h4 class="competency-group-title">Machine learning</h4>
+                <div class="competencies-list">
+                    <span class="competency-badge">Machine learning</span>
+                    <span class="competency-badge">Arbres de décision</span>
+                    <span class="competency-badge">Réseaux de neurones et/ou deep learning</span>
+                    <span class="competency-badge">Analyse en composantes principales</span>
+                    <span class="competency-badge">Clustering</span>
+                    <span class="competency-badge">NLP</span>
+                </div>
+            </div>
+
+            <div class="competency-group">
+                <h4 class="competency-group-title">Données &amp; outils</h4>
+                <div class="competencies-list">
+                    <span class="competency-badge">Traitement de données</span>
+                    <span class="competency-badge">Nettoyage de données</span>
+                    <span class="competency-badge">Analyse de données</span>
+                    <span class="competency-badge">Data-viz</span>
+                    <span class="competency-badge">Cartographie</span>
+                    <span class="competency-badge">Web scraping</span>
+                    <span class="competency-badge">Git / GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2025 — 2027</span>
+                    <h3>Master ECAP - mention économétrie-statistiques - Université de Nantes</h3>
+                    <p>Maitrise des outils informatiques pour le traitement de la data. <br>
+                       Économétrie, série temporelle, machine learning, SQL.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2022 — 2025</span>
+                    <h3>Double licence mathématiques-éconmie - Université d'Angers</h3>
+                    <p>Algèbre linéaire, statistiques inférentielles, microéconomie, macroéconomie, économétrie et analyse de données.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="#" class="footer-legal-link" id="openLegalModal">Mentions légales</a>
+            <div class="footer-center-group">
+                <a href="mailto:ton.email@exemple.com" class="footer-cta">Me contacter</a>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </footer>
+
+    <script src="static/js/nav.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/apropos.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Chargement... - Portfolio Jules Bouscaud</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <header class="floating-navbar">
+        <a href="index.html" class="navbar-logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>Portfolio Data</span>
+        </a>
+        <nav class="navbar-links" id="navbarLinks">
+            <a href="index.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="stage.html">Stage</a>
+            <a href="a_propos.html">À propos de moi</a>
+        </nav>
+        <a href="static/docs/cv.pdf" class="navbar-download-btn" download="Mon_CV.pdf">Mon CV</a>
+        <button class="navbar-mobile-toggle" id="navbarMobileToggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <div class="project-detail-layout">
+            <div class="project-main">
+                <a href="projets.html" class="back-link">
+                    <span class="back-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <header class="project-header">
+                    <h1 id="p-title">Chargement...</h1>
+                    <p class="project-date" id="p-date"></p>
+                </header>
+
+                <section class="resume-flex">
+                    <div class="resume-text">
+                        <p id="p-summary"></p>
+                    </div>
+                    <div class="resume-image">
+                        <img id="p-image" src="" alt="">
+                    </div>
+                    <div class="resume-text">
+                        <p id="p-summary-bottom"></p>
+                    </div>
+                </section>
+
+                <section class="skills-static">
+                    <h2>Compétences travaillées</h2>
+                    <div class="skills-badges" id="p-skills"></div>
+                </section>
+
+                 <section class="comment-box">
+                    <h2>Commentaire</h2>
+                    <p id="p-comment"></p>
+                </section>
+            </div>
+
+            <aside class="data-box" id="data-box">
+                <h3>Fichiers et données</h3>
+                <dl id="data-dl"></dl>
+                <div id="data-buttons"></div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <!-- Contenu du footer identique aux autres pages -->
+        <div class="footer-inner">
+            <a href="#" class="footer-legal-link" id="openLegalModal">Mentions légales</a>
+            <div class="footer-center-group">
+                <a href="mailto:ton.email@exemple.com" class="footer-cta">Me contacter</a>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </footer>
+
+    <script src="static/js/nav.js"></script>
+    <script src="static/js/modal.js"></script>
+
+    <!-- Script pour injecter les données JSON -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const project = data[projectId];
+
+                if (project) {
+                    document.getElementById('page-title').textContent = project.title + " - Portfolio Jules Bouscaud";
+                    document.getElementById('p-title').textContent = project.title;
+                    document.getElementById('p-date').textContent = project.date;
+                    document.getElementById('p-summary').textContent = project.summary;
+                    document.getElementById('p-summary-bottom').textContent = project.summary_bottom;
+                    document.getElementById('p-image').src = "static/" + project.image;
+                    document.getElementById('p-image').alt = project.title;
+                    document.getElementById('p-comment').textContent = project.comment;
+
+                    const skillsContainer = document.getElementById('p-skills');
+                    project.skills.forEach(skill => {
+                        const skillClass = skill.toLowerCase().replace(' ', '-');
+                        const span = document.createElement('span');
+                        span.className = `skill-badge skill-${skillClass} static`;
+                        span.textContent = skill;
+                        skillsContainer.appendChild(span);
+                    });
+
+                    const dl = document.getElementById('data-dl');
+                    if (project.data_origin) {
+                        dl.innerHTML += `<dt>Origine</dt><dd>${project.data_origin}</dd>`;
+                    }
+                    if (project.data_source) {
+                        dl.innerHTML += `<dt>Source</dt><dd>${project.data_source}</dd>`;
+                    }
+
+                    const buttonsContainer = document.getElementById('data-buttons');
+                    
+                    if (project.data_file || project.data_link) {
+                        buttonsContainer.innerHTML += `<p class="data-box-label">Les données</p>`;
+                        if (project.data_file) {
+                            buttonsContainer.innerHTML += `<a href="static/${project.data_file}" class="download-btn" download>Télécharger les données</a>`;
+                        } else {
+                            buttonsContainer.innerHTML += `<a href="${project.data_link}" class="download-btn" target="_blank" rel="noopener noreferrer">Accéder à la base de données</a>`;
+                        }
+                    }
+
+                    if (project.project_file || project.project_link) {
+                        buttonsContainer.innerHTML += `<p class="data-box-label">Le projet</p>`;
+                        if (project.project_file) {
+                            buttonsContainer.innerHTML += `<a href="static/${project.project_file}" class="download-btn" download>Télécharger le projet</a>`;
+                        } else {
+                            buttonsContainer.innerHTML += `<a href="${project.project_link}" class="download-btn" target="_blank" rel="noopener noreferrer">Accéder au projet</a>`;
+                        }
+                    }
+
+                    if (project.synthesis_file) {
+                        buttonsContainer.innerHTML += `<p class="data-box-label">Note de synthèse</p>`;
+                        buttonsContainer.innerHTML += `<a href="static/${project.synthesis_file}" class="download-btn" download>Télécharger la note de synthèse</a>`;
+                    }
+                } else {
+                    document.getElementById('p-title').textContent = "Projet introuvable";
+                }
+            })
+            .catch(error => console.error("Erreur de chargement :", error));
+    </script>
+</body>
+</html>

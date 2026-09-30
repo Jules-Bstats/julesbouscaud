@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage - Portfolio Jules Bouscaud</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <header class="floating-navbar">
+        <a href="index.html" class="navbar-logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>Portfolio Data</span>
+        </a>
+        <nav class="navbar-links" id="navbarLinks">
+            <a href="index.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="stage.html">Stage</a>
+            <a href="a_propos.html">À propos de moi</a>
+        </nav>
+        <a href="static/docs/cv.pdf" class="navbar-download-btn" download="Mon_CV.pdf">Mon CV</a>
+        <button class="navbar-mobile-toggle" id="navbarMobileToggle" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>Ce que je recherche</h2>
+            <div class="search-box">
+                <p>Je suis à la recherche d'un stage de fin d'études de minimum 3 mois et de maximum 6 mois
+                    pour valider mon master d'économétrie-statistiques. Voici mes principaux critères de recherche :
+                </p>
+                <ul>
+                    <li>Nantes et ses alentours</li>
+                    <li>À partir du 8 mars 2027</li>
+                    <li>Domaine de la data engineering ou de la data science</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="#" class="footer-legal-link" id="openLegalModal">Mentions légales</a>
+            <div class="footer-center-group">
+                <a href="mailto:ton.email@exemple.com" class="footer-cta">Me contacter</a>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </footer>
+
+    <script src="static/js/nav.js"></script>
+    <script src="static/js/modal.js"></script>
+</body>
+</html>
