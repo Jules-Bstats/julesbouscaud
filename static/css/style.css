@@ -269,12 +269,8 @@ main {
     transition: all 0.3s ease;
 }
 
-.navbar-links .navbar-download-btn-mobile {
-    display: none;
-}
-
-@media (max-width: 950px) {
-    .navbar-links { gap: 1.5rem; }
+.navbar-links a.navbar-download-btn-mobile {
+    display: none !important;
 }
 
 @media (max-width: 768px) {
@@ -306,10 +302,10 @@ main {
     .navbar-mobile-toggle { display: flex; }
     .navbar-download-btn { display: none; }
     
-    .navbar-links .navbar-download-btn-mobile {
+    .navbar-links a.navbar-download-btn-mobile {
         display: inline-flex !important;
         justify-content: center;
-        width: auto;                 /* annule le width:100% des liens du menu */
+        width: auto;
         margin-top: 1rem;
         padding: 0.7rem 2.2rem;
         background-color: var(--color-teal);
