@@ -476,11 +476,11 @@ main {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
-.training-progress h2 { margin-bottom: 0.3rem; }
+.training-progress h2 { margin-bottom: 0.5rem; }
 
 .training-subtitle {
     font-size: 0.95rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1rem;
     color : var(--color-teal)
 }
 
@@ -550,15 +550,18 @@ main {
     .training-subtitle { margin-bottom: 1.5rem; }
 }
 
-/* --- ABOUT ME (Encart) --- */
+/* --- ABOUT ME --- */
 .about-me {
-    background-color: #FFFFFF;
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    margin: 2rem 0 0;
+    text-align: justify;
 }
+
+.about-me h2,
+.projects-preview h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
 .about-me .about-text { text-align: justify; margin-bottom: 1.5rem; }
 
 .personal-note {
@@ -573,8 +576,12 @@ main {
 /* --- PROJETS PREVIEW & HEADER --- */
 .projects-preview {
     text-align: left;
-    margin: 4rem 0 1rem;
+    margin: 0 0 1rem;
+    padding-top: 4rem;
 }
+
+.projects-preview h2 { margin-bottom: 1.5rem; }
+
 .projects-header { text-align: left; margin-bottom: 2.5rem; }
 .projects-intro { text-align: left; }
 
