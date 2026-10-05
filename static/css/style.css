@@ -480,8 +480,8 @@ main {
 
 .training-subtitle {
     font-size: 0.95rem;
-    opacity: 0.75;
     margin-bottom: 1.8rem;
+    color : var(--color-teal)
 }
 
 .progress-track {
@@ -522,6 +522,7 @@ main {
 .progress-track:hover .progress-fill::after,
 .progress-track:focus-visible .progress-fill::after {
     opacity: 1;
+    background-color : #8c5ff2;
 }
 
 .progress-track:focus-visible {
@@ -536,7 +537,6 @@ main {
     margin-top: 0.7rem;
     font-size: 0.85rem;
     font-weight: 500;
-    opacity: 0.7;
 }
 
 .progress-percent {
